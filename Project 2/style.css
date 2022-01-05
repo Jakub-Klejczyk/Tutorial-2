@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+
+@font-face {
+    font-family: PopLight;
+    src: url('./Data/fonts/Poppins-Light.ttf');
+    src: url('./Data/fonts/Poppins-Medium.ttf');
+    src: url('./Data/fonts/Poppins-Regular.ttf');
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    font-family: PopLight;
+    background-image: radial-gradient(rgb(36, 36, 82), rgb(22, 20, 20));
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 90vh;
+    padding-bottom: 5vh;
+}
+
+.text {
+    grid-column: 1/2;
+    align-self: end;
+    color: white;
+
+}
+
+.text p {
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.text h3 {
+    font-size: 42px;
+    padding: 10px 0px;
+}
+
+.text h1 {
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.hero {
+    grid-column: 2/3;
+    display: flex;
+    height: 90%;
+    align-self: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hero img {
+    transition: transform 0.3s ease-out;
+}
+
+.hero a {
+    display: flex;
+}
+
+.hero:hover .hright {
+    transform: translate(0%, 0%);
+}
+.hero:hover .hleft {
+    transform: translate(0%, 0%);
+}
+
+.hleft {
+    transform: translateY(-10%);
+}
+
+.hright {
+    transform: translateY(10%);
+}
+
+.scroll {
+    position: absolute;
+    display: flex;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.dot1, .dot2, .dot3 {
+    display: flex;
+    opacity: 0.5;
+}
+
+.scroll.active {
+    opacity: 1;
+}
+
+.scroll h3 {
+    padding-right: 40px;
+}
+
+.dot2 {
+    padding: 60px 0px;
+}
+
+.scroll img {
+    transform: scale(2);
+}
+
+.scroll img:hover {
+    transform: scale(4);
+    animation: dot 0.5s infinite alternate;
+}
+
+@keyframes dot {
+    0% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(4);
+    }
+  }
+
